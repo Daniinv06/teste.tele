@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Education Website Template</title>
+
+
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <!-- External CSS -->
+  <link rel="stylesheet" href="../css/escaperomm.css" />
+  <link rel="stylesheet" href="../css/escapeRoom1...css">
+   <!-- External JS -->
+    <script src="/SITE-SD TESTE/SITE_SD TESTE/SITE_SD TESTE/JAVA/escapeRoom1.js" defer></script>
+
+  
+</head>
+<body>
+
+
+
+<!-- Navigation start -->
+<nav class="navbar bg-body-tertiary">
+  <div class="container-fluid d-flex justify-content-between align-items-center">
+    <a class="navbar-brand logo" href="/SITE-SD TESTE/SITE_SD TESTE/SITE_SD TESTE/HTML/pagInicial.html">
+      <img src="../IMAGENS/img/saude digital_nome barra.png" alt="Logo" class="logo-img" style="height:50px;">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="bi bi-list" style="font-size: 1.8rem;"></i></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/SITE-SD TESTE/SITE_SD TESTE/SITE_SD TESTE/HTML/podcastInicio.html">Podcast</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="/SITE-SD TESTE/SITE_SD TESTE/SITE_SD TESTE/HTML/informacoescurso.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Informações sobre o curso
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/SITE-SD TESTE/SITE_SD TESTE/SITE_SD TESTE/HTML/infoacesso.html">Informações de acesso</a></li>
+            <li><a class="dropdown-item" href="/SITE-SD TESTE/SITE_SD TESTE/SITE_SD TESTE/HTML/Planodeestudos.html">Planos de estudo</a></li>
+            <li><a class="dropdown-item" href="/SITE-SD TESTE/SITE_SD TESTE/SITE_SD TESTE/HTML/jogoestagio.html">Estágio</a></li>
+            <li><a class="dropdown-item" href="/SITE-SD TESTE/SITE_SD TESTE/SITE_SD TESTE/HTML/projetosRealizados.html">Projetos realizados</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/SITE-SD TESTE/SITE_SD TESTE/SITE_SD TESTE/HTML/saidasprof.html">Saídas profissionais</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/SITE-SD TESTE/SITE_SD TESTE/SITE_SD TESTE/HTML/noticias.html">Notícias e eventos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/SITE-SD TESTE/SITE_SD TESTE/SITE_SD TESTE/HTML/duvidas.html">Dúvidas e questões</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+<!-- missão -->
+<section id="missao" class="missao bloco-missao-cinza section-padding">
+  <div class="container">
+    <div class="row justify-content-center text-center">
+        <h1 class="fw-bold text-dark">Diagnóstico</h1>
+        <p><h2>Analisa os dados, escolhe os exames certos e faz um diagnóstico!</h2></p>
+        <p class="text-dark">
+         <h5> Missão: Acede ao sistema de diagnóstico bloqueado. 
+          <br>Para o ativar, tens de introduzir a combinação correta
+          com base nos principais sintomas e fatores diagnósticos da Doença de Crohn.</h5>
+        <img src="/SITE-SD TESTE/SITE_SD TESTE/SITE_SD TESTE/IMAGENS/img/ra_modelo anatomico.jpg" alt="RA" class="img-fluid qr-missao">
+        <div class="qr-legenda text-muted small mt-2">
+          <span><strong> Visão Imersiva:</strong> Para uma experiência mais envolvente, aponta o teu telemóvel para o QR code. Em seguida encontre a imagem abaixo com a câmara do telemóvel<br>
+      Vais entrar no mundo da realidade aumentada e explorar o modelo 3D.<br></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+ <!-- foto interativa  -->
+<img src="../IMAGENS/img/escape room 1.png" usemap="#workmap" alt="escape room 1"
+class="img-fluid img responsive rounded mx-auto d-block">
+
+<map name="workmap">
+  <area id="areaIntestinos" shape="rect" coords="380,245,824,640" href="#" alt="intestinos">
+  <area id="areaSangue" shape="rect" coords="115,511,417,919" href="#" alt="sangue">
+  <area id="areaDiario" shape="rect" coords="1233,552,1426,852" href="#" alt="diario">
+  <area id="areaExames" shape="rect" coords="872,253,1201,653" href="#" alt="exames">
+</map>
+
+<!-- Modal Intestinos -->
+<div class="modal fade" id="modalIntestinos" tabindex="-1" aria-labelledby="modalIntestinosLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalIntestinosLabel">Doença Inflamatória Intestinal</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+      </div>
+      <div class="modal-body">
+        <p>A Doença de Crohn afeta mais frequentemente o intestino delgado e grosso, causando inflamações que provocam dor e desconforto abdominal.</p>
+        <div class="ratio ratio-16x9">
+          <iframe src="https://www.youtube.com/embed/seDB531YsGo" title="Vídeo" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Sangue -->
+<div class="modal fade" id="modalSangue" tabindex="-1" aria-labelledby="modalSangueLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalSangueLabel">Análises de Sangue</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+      </div>
+      <div class="modal-body">
+        <p>Exames de sangue ajudam a detetar anemia, inflamação ou défices nutricionais comuns em quem tem Crohn.</p>
+        <img src="/SITE-SD TESTE/SITE_SD TESTE/SITE_SD TESTE/IMAGENS/img/sangue.png" alt="Análises de Sangue" style="max-width:100%;">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Diário -->
+<div class="modal fade" id="modalDiario" tabindex="-1" aria-labelledby="modalDiarioLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalDiarioLabel">Registo de Sintomas</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+      </div>
+      <div class="modal-body">
+        <p>Registar os sintomas ajuda o médico a perceber a frequência, intensidade e padrões da doença.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Exames -->
+<div class="modal fade" id="modalExames" tabindex="-1" aria-labelledby="modalExamesLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalExamesLabel">Exames</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+      </div>
+      <div class="modal-body">
+        <p>A colonoscopia é fundamental para visualizar diretamente a inflamação intestinal e recolher biópsias.</p>
+        <img src="/SITE-SD TESTE/SITE_SD TESTE/SITE_SD TESTE/IMAGENS/img/exames.jpg" alt="Exames" style="max-width:100%;">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- gamificação -->
+  <div class="mission">
+    <h2><p>Arrasta os sintomas e exames corretos para o bloco de diagnóstico.</p> </h2>
+  </div>
+
+  <div class="progress-bar">
+    <div class="progress" id="progress"></div>
+  </div>
+
+<div class="lista-termos">
+  <div class="draggable" id="DIARREIA_CRONICA" draggable="true">DIARREIA CRÔNICA</div>
+  <div class="draggable" id="GRIPE_SAZONAL" draggable="true">GRIPE SAZONAL</div>
+  <div class="draggable" id="SANGUE_NAS_FEZES" draggable="true">SANGUE NAS FEZES</div>
+  <div class="draggable" id="EXAMES_DE_SANGUE" draggable="true">EXAMES DE SANGUE</div>
+  <div class="draggable" id="PERDA_PESO" draggable="true">PERDA DE PESO INEXPLICADA</div>
+  <div class="draggable" id="ELETROCARDIOGRAMA" draggable="true">ELETROCARDIOGRAMA</div>
+  <div class="draggable" id="COLONOSCOPIA" draggable="true">COLONOSCOPIA</div>
+  <div class="draggable" id="FADIGA_INTENSA" draggable="true">FADIGA INTENSA</div>
+  <div class="draggable" id="VISAO_TURVA" draggable="true">VISÃO TURVA</div>
+</div>
+<div class="dropzone" id="diagnostico">
+  <p>Arrasta para aqui os termos corretos para um diagnóstico provável:</p>
+</div>
+
+  <button onclick="validarResposta()">VALIDAR RESPOSTA</button>
+
+
+
+
+
+
+  <!-- Rodapé -->
+<footer>
+  <div class="footer-container">
+    <!-- logo pequeno -->
+    <div class="footer-left">
+      <img src="/SITE-SD TESTE/SITE_SD TESTE/SITE_SD TESTE/IMAGENS/img/Black and Ivory Modern Name YouTube Channel Art (3).png" alt="Ilustração Saúde Digital">
+    </div>
+
+    <div class="footer-center">
+      <p class="footer-slogan">Escolhe saúde digital para um futuro promissor!</p>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/digital-health-b6612a353/"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/saude.digital_e2s?..."><i class="bi bi-instagram"></i></a>
+        <a href="https://www.tiktok.com/@saudedigital_e2s?is_from_webapp=1&sender_device=pc"><i class="bi bi-tiktok"></i></a>
+      </div>
+      <div class="logos">
+        <img src="/SITE-SD TESTE/SITE_SD TESTE/SITE_SD TESTE/IMAGENS/img/BARRA_LOGOS-01.png" alt="Logo União Europeia">
+      </div>
+    </div>
+
+    <!-- Newsletter à direita -->
+    <div class="footer-right">
+      <div class="newsletter-section">
+        <h4>Subscreve a nossa newsletter</h4>
+        <p>Recebe novidades e atualizações sobre o curso de Saúde Digital.</p>
+        <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+          <input type="email" placeholder="O teu email" required>
+          <button type="submit">Subscrever</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <script src="../JAVA/escapeRoom1...js" defer></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+</body>
+</html>

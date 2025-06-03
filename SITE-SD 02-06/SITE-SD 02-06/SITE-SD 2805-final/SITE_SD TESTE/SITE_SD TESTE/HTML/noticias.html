@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saúde Digital</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <!-- External CSS -->
+  <link rel="stylesheet" href="../css/noticias.css" />
+    <!-- External CSS -->
+  <link rel="stylesheet" href="../css/tema_escuro.css" />
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Calendário -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.3.4/dist/css/datepicker.min.css">
+</head>
+<body>
+
+<!-- Navigation start -->
+<nav class="navbar bg-body-tertiary navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand logo" href="#">
+      <img src="../IMAGENS/img/saude digital_nome barra.png" alt="Logo" class="logo-img" style="height:50px;">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="bi bi-list" style="font-size: 1.8rem;"></i></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="../HTML/podcast_Inicio.html">Podcast</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Informações sobre o curso
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="../HTML/info_acesso.html">Informações de acesso</a></li>
+            <li><a class="dropdown-item" href="../HTML/Planodeestudos.html">Planos de estudo</a></li>
+            <li><a class="dropdown-item" href="../HTML/jogoestagio.html">Estágio</a></li>
+            <li><a class="dropdown-item" href="../HTML/projetosRealizados.html">Projetos realizados</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../HTML/saidas-prof.html">Saidas Profissionais</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../HTML/noticias.html">Noticias e Eventos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../HTML/duvidas.html">Dúvidas e Questões</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="container py-4">
+    <h1 class="mb-4 text-primary">Notícias & Eventos</h1>
+    <div class="row g-4">
+      <!-- Coluna do Calendário -->
+      <div class="col-md-4">
+        <h4>Calendário de Eventos</h4>
+        <div id="calendar-container"></div>
+        <div id="evento-info" class="text-primary"></div>
+      </div>
+      <!-- Coluna de Conteúdo -->
+      <div class="col-md-8">
+        <!-- Tabs -->
+        <ul class="nav nav-tabs" id="tabControl" role="tablist">
+          <li class="nav-item">
+            <button class="nav-link active" id="noticias-tab" data-bs-toggle="tab" data-bs-target="#noticias" type="button" role="tab">Notícias</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" id="eventos-tab" data-bs-toggle="tab" data-bs-target="#eventos" type="button" role="tab">Eventos</button>
+          </li>
+        </ul>
+        <!-- Conteúdo das Tabs -->
+        <div class="tab-content mt-3" id="tabContent">
+          <!-- Notícias -->
+          <div class="tab-pane fade show active" id="noticias" role="tabpanel">
+            <div class="card p-3">
+              <h5>Novo site SD já está no ar!</h5>
+              <small class="text-muted">18 Maio 2025</small>
+              <p class="mt-2">Com design renovado e melhorias de acessibilidade, o novo portal oferece navegação mais rápida e conteúdos fresquinhos.</p>
+            </div>
+            <div class="card p-3">
+              <h5>Calendário de eventos de verão divulgado</h5>
+              <small class="text-muted">15 Maio 2025</small>
+              <p class="mt-2">Confira todas as iniciativas planeadas entre Junho e Agosto - de hackathons a workshops comunitários.</p>
+            </div>
+          </div>
+          <!-- Eventos -->
+          <div class="tab-pane fade" id="eventos" role="tabpanel">
+            <div class="card p-3">
+              <h5>Webinar: Dicas avançadas de CSS</h5>
+              <small class="text-muted">4 Junho 2025 · Online (Zoom)</small>
+              <p class="mt-2">Descubra truques modernos de layout responsivo e use CSS como um(a) pro!</p>
+            </div>
+            <div class="card p-3">
+              <h5>Hackathon de Verão 2025</h5>
+              <small class="text-muted">10 Junho 2025 · UPTEC, Porto</small>
+              <p class="mt-2">24h para criar soluções inovadoras para a comunidade local.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.3.4/dist/js/datepicker-full.min.js"></script>
+<script>
+  const eventos = {
+    '2025-06-04': 'Webinar: Dicas avançadas de CSS',
+    '2025-06-10': 'Hackathon de Verão 2025',
+    '2025-06-15': 'Workshop React'
+  };
+
+  const calendarEl = document.getElementById('calendar-container');
+
+  const datepicker = new Datepicker(calendarEl, {
+    calendarWeeks: false,
+    language: 'pt-PT',
+    autohide: false,
+    format: 'yyyy-mm-dd',
+    todayHighlight: true,
+    beforeShowDay: (date) => {
+      const yyyy = date.getFullYear();
+      const mm = String(date.getMonth() + 1).padStart(2, '0');
+      const dd = String(date.getDate()).padStart(2, '0');
+      const dateStr = `${yyyy}-${mm}-${dd}`;
+
+      if (eventos[dateStr]) {
+        return {
+          tooltip: eventos[dateStr],
+          classes: 'bg-primary text-white fw-bold'
+        };
+      }
+    }
+  });
+
+  // Quando clicar numa data
+  calendarEl.addEventListener('changeDate', (e) => {
+    const selectedDate = e.detail.date;
+    const yyyy = selectedDate.getFullYear();
+    const mm = String(selectedDate.getMonth() + 1).padStart(2, '0');
+    const dd = String(selectedDate.getDate()).padStart(2, '0');
+    const dateStr = `${yyyy}-${mm}-${dd}`;
+    const eventoInfo = document.getElementById('evento-info');
+
+    if (eventos[dateStr]) {
+      eventoInfo.textContent = `Evento: ${eventos[dateStr]}`;
+    } else {
+      eventoInfo.textContent = 'Não há eventos neste dia.';
+    }
+  });
+</script>
+
+<!-- Modal Bootstrap para confirmação de subscrição -->
+<div class="modal fade" id="modalNewsletter" tabindex="-1" aria-labelledby="modalNewsletterLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalNewsletterLabel">Newsletter</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+      </div>
+      <div class="modal-body">
+        O utilizador está subscrito na newsletter!
+      </div>
+      <div class="modal-footer"></div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<!-- Footer section starts from here -->
+<footer>
+  <div class="footer-img">
+    <img src="../IMAGENS/img/BARRA_LOGOS-01.png" alt="Imagem 2" class="img-prr">
+  </div>
+  <div class="footer-center">
+    <p class="footer-slogan">Escolhe saúde digital para um futuro promissor!</p>
+  </div>
+  <div class="footer-col">
+    <h3>Newsletter</h3>
+    <p>Inscreve-te para receberes todas as novidades.</p>
+    <div class="subscribe">
+      <input type="email" id="newsletter-email" placeholder="Escreva o seu email">
+      <a href="#" class="yellow" id="btn-subscrever">SUBSCREVER</a>
+    </div>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/saude.digital_e2s" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.linkedin.com" target="_blank">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="https://www.tiktok.com/@saudedigital_e2s" target="_blank">
+        <i class="fab fa-tiktok"></i>
+      </a>
+    </div>
+  </div>
+</footer>
+<!-- Footer section ends from here -->
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+<script>
+  document.getElementById('btn-subscrever').addEventListener('click', function(event) {
+    event.preventDefault();
+    var email = document.getElementById('newsletter-email').value.trim();
+    if (email === "") {
+      alert("Por favor, insira o seu email para subscrever a newsletter.");
+      document.getElementById('newsletter-email').focus();
+      return;
+    }
+    // Aqui podes validar o formato do email se quiseres
+    var modal = new bootstrap.Modal(document.getElementById('modalNewsletter'));
+    modal.show();
+  });
+</script>
+
+
+
+<script>
+  // Aplica o tema salvo ao carregar a página
+  (function() {
+    const theme = localStorage.getItem('theme');
+    if (theme === 'dark') {
+      document.body.classList.add('dark-theme');
+    } else {
+      document.body.classList.remove('dark-theme');
+    }
+  })();
+</script>
+</body>
+</html>

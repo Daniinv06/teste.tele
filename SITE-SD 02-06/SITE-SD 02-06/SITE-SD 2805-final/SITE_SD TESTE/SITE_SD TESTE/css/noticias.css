@@ -1,0 +1,414 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800;1,900&display=swap');
+
+/*------------------- Reset básico -------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background: #fff;
+  color: #333;
+}
+
+main {
+  padding-top: 80px; /* ajuste conforme a navbar */
+  margin-bottom: 100px; /* espaço para o footer nunca tapar conteúdo */
+}
+
+/*------------------- Tipografia -------------------*/
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+}
+
+span {
+  font-size: .9rem;
+}
+
+h6 {
+  font-size: 1.1rem;
+  color: rgb(24, 24, 49);
+}
+
+/*------------------- Navbar -------------------*/
+nav.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #FFD932 !important;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+  padding: 0;
+}
+
+.navbar .navbar-brand {
+  position: static;
+  margin-left: 16px;
+}
+
+.navbar-toggler {
+  position: static;
+  margin-left: 12px;
+}
+
+.collapse.navbar-collapse {
+  justify-content: flex-start !important;
+}
+
+.navbar-nav {
+  margin-left: 0;
+  margin-right: auto;
+  display: flex;
+  justify-content: flex-start;
+  width: auto;
+  text-align: left;
+}
+
+.navbar .nav-link {
+  color: #000 !important;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+  color: #000000 !important;
+}
+
+/* Dropdown customizado */
+.dropdown-menu {
+  background-color: #FFDF52;
+}
+
+.dropdown-menu .dropdown-item {
+  color: #000;
+  text-align: center;
+}
+
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:focus {
+  background-color: #FFD932;
+  color: #000;
+}
+
+
+
+
+
+
+
+
+/* Modo escuro: fundo geral e cards */
+body.dark-theme {
+  background: #d9d9d9 !important;
+  color: #222 !important;
+}
+body.dark-theme main,
+body.dark-theme .container,
+body.dark-theme .card,
+body.dark-theme .tab-content,
+body.dark-theme .nav-tabs,
+body.dark-theme .tab-pane {
+  background: #d9d9d9 !important;
+  color: #222 !important;
+}
+body.dark-theme .card {
+  background: #333 !important;
+  color: #fff !important;
+}
+
+body.dark-theme h4,
+body.dark-theme h5,
+body.dark-theme small
+{
+  color: #fff !important;
+}
+
+
+/* Título principal em modo escuro */
+body.dark-theme h1,
+body.dark-theme .titulo-pagina {
+  color: #000000 !important;
+}
+
+/* Nome "Calendário de Eventos" em modo escuro */
+
+body.dark-theme h4
+ {
+  color: #000000 !important;
+}
+
+/* Evento em baixo do calendário em modo escuro */
+body.dark-theme #evento-info,
+body.dark-theme .evento-info {
+  color: #fff !important;
+  background: #333 !important;
+  border-radius: 8px;
+  padding: 10px 16px;
+}
+
+/* Botões "Dúvida" e "Notícias" em modo escuro */
+body.dark-theme .btn-duvida,
+body.dark-theme .btn-noticias,
+body.dark-theme .btn,
+body.dark-theme button {
+  background: #333 !important;
+  color: #fff !important;
+  border: 1px solid #fff !important;
+}
+body.dark-theme .btn-duvida:hover,
+body.dark-theme .btn-noticias:hover,
+body.dark-theme .btn:hover,
+body.dark-theme button:hover {
+  background: #ffd932 !important;
+  color: #222 !important;
+  border: 1px solid #ffd932 !important;
+}
+
+
+
+/* Modo escuro: botões das tabs */
+body.dark-theme .nav-tabs .nav-link {
+  background: #333 !important;
+  color: #fff !important;
+  border: 1px solid #fff !important;
+}
+
+/* Botão ativo: Notícias */
+body.dark-theme .nav-tabs .nav-link.active#noticias-tab {
+  background: #ffd932 !important;
+  color: #222 !important;
+  border: 1px solid #ffd932 !important;
+}
+
+/* Botão ativo: Eventos */
+body.dark-theme .nav-tabs .nav-link.active#eventos-tab {
+  background: #ffd932 !important;
+  color: #000000 !important;
+  border: 1px solid #ffd932 !important;
+}
+
+ 
+
+
+/*------------------- Cartões e Tabs -------------------*/
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1rem;
+}
+
+.datepicker-cell.bg-primary {
+  border-radius: 50%;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: #0057b7;
+  color: white;
+}
+
+.nav-tabs .nav-link {
+  color: #0057b7;
+}
+
+#evento-info {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+/*------------- Footer ------------*/
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 2vw 8vw;
+  background-color: #FFD932;
+  width: 100%;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.footer-img {
+  flex: 1 1 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  min-width: 180px;
+}
+
+.footer-img img,
+.img-prr {
+  width: 500px;
+  height: auto;
+  margin-top: 165px;
+  align-self: flex-end;
+}
+
+.footer-center {
+  flex: 2 1 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 220px;
+  text-align: center;
+}
+
+.footer-slogan {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.7rem;
+  color: #000;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.footer-col {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 260px;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.footer-col h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.4rem;
+  color: #000000;
+  font-weight: 700;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.footer-col p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  color: #000000;
+  font-weight: 400;
+  margin-bottom: 6px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.footer-col .subscribe {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0 20px 0;
+  justify-content: center;
+  width: 100%;
+}
+
+.footer-col input[type="email"] {
+  width: 220px;
+  padding: 15px 12px;
+  background: #000;
+  border: none;
+  outline: none;
+  color: #fff;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.footer-col .yellow,
+.footer-col .subscribe a {
+  font-size: 1.1rem;
+  padding: 15px 24px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  background: #ffbb00;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s;
+  font-weight: bold;
+}
+
+.footer-col .yellow:hover,
+.footer-col .subscribe a:hover {
+  background: #000;
+  color: #fff;
+}
+
+.footer-col .social-icons {
+  margin-top: 40px;
+  display: flex;
+  gap: 10px;
+  justify-content: right;
+  width: 100%;
+  align-self: flex-end;
+}
+
+.footer-col .social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background-color: #000;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 1.3rem;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s;
+}
+
+.footer-col .social-icons a:hover {
+  background: #ffbb00;
+  color: #000;
+  border: 1px solid #000;
+}
+
+/* Responsivo para mobile */
+@media (max-width: 900px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+  }
+  .footer-img,
+  .footer-center,
+  .footer-col {
+    width: 100%;
+    min-width: unset;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .footer-img img,
+  .img-prr {
+    margin-top: 40px;
+  }
+  .footer-col {
+    padding-bottom: 20px;
+  }
+  .footer-col h3,
+  .footer-col p {
+    text-align: center;
+  }
+  .footer-col .social-icons {
+    justify-content: center !important;
+    align-self: center !important;
+  }
+}

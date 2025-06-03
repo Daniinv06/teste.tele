@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saúde Digital</title>
+
+
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <!-- External CSS -->
+  <link rel="stylesheet" href="../css/jogo_estagio.css" />
+
+ 
+</head>
+<body>
+
+
+
+
+
+
+
+  <h2>Estágios e empresas com parceria</h2>
+  <h3>Associa as empresas com parceria às áreas de atuação!</h3>
+
+  <!-- LOGOS -->
+  <div class="container" id="logos">
+    <div class="logo" draggable="true" id="Microsoft" title="Tecnologia cloud, IA e soluções digitais para o setor da saúde.">
+      Microsoft<br><img src="../IMAGENS/empresas/Microsoft-Logo.png" alt="Microsoft"></div>
+
+    <div class="logo" draggable="true" id="Cuf" title="Rede privada de cuidados de saúde com inovação digital crescente.">
+      Cuf<br><img src="../IMAGENS/empresas/cuf.png" alt="Cuf"></div>
+
+    <div class="logo" draggable="true" id="Multicare"title="Seguradora com serviços digitais para gestão de saúde e telemedicina.">
+      Multicare<br><img src="../IMAGENS/empresas/Multicare.png" alt="Multicare"></div>
+
+    <div class="logo" draggable="true" id="Vodafone"title="Conectividade e IoT aplicados à saúde e monitorização remota.">
+      Vodafone<br><img src="../IMAGENS/empresas/Vodafone_logo_2017.png" alt="Vodafone"></div>
+
+    <div class="logo" draggable="true" id="Roche"title="Desenvolve medicamentos e soluções digitais de diagnóstico personalizado.">
+      Roche<br><img src="../IMAGENS/empresas/roche.png" alt="Roche"></div>
+
+    <div class="logo" draggable="true" id="ULS"title="Unidade pública que integra cuidados digitais na gestão hospitalar.">
+      ULS Santo António<br><img src="../IMAGENS/empresas/uls snt.antonio.png" alt="uls"></div>
+
+    <div class="logo" draggable="true" id="Linde"title="Fornece terapias respiratórias com monitorização digital remota.">
+      linde<br><img src="../IMAGENS/empresas/linde.png" alt="linde"></div>
+
+    <div class="logo" draggable="true" id="VisualThinking" title="Consultoria em design de processos e comunicação visual em saúde.">
+      Visual Thinking<br><img src="../IMAGENS/empresas/Visual-Thinking-1-300x300.png" alt="VisualThinking"></div>
+
+    <div class="logo" draggable="true" id="Kendi"title="Cria conteúdos digitais para educação médica e comunicação científica.">
+      KendirStudios<br><img src="../IMAGENS/empresas/kendir.png" alt="kendir"></div>
+
+    <div class="logo" draggable="true" id="Decunify"title="Infraestruturas tecnológicas e redes para ambientes hospitalares.">
+      Decunify<br><img src="../IMAGENS/empresas/decunify.png" alt="decunify"></div>
+
+    <div class="logo" draggable="true" id="ByMe"title="Soluções de engenharia e automação aplicadas a edifícios de saúde.">
+      Byme<br><img src="../IMAGENS/empresas/byme.jpg" alt="byme"></div>
+
+    <div class="logo" draggable="true" id="Ipo"title="Instituto oncológico com soluções digitais em diagnóstico e tratamento.">
+      IPOPorto<br><img src="../IMAGENS/empresas/ipoporto.png" alt="ipoporto"></div>
+  </div>
+
+  <!-- ZONAS DE DROP -->
+  <div class="container">
+    <div class="dropzone" data-area="Tecnologia e Inovação"><h4>Tecnologia e Inovação</h4>
+      <h5>Empresas que desenvolvem soluções tecnológicas, plataformas, software ou infraestrutura para a saúde digital</h5></div>
+
+    <div class="dropzone" data-area="Saúde e Cuidados de Saúde"><h4>Saúde e Cuidados de Saúde:</h4>
+      <h5>Empresas que prestam cuidados médicos diretamente ou integram hospitais/unidades clínicas</h5></div>
+
+    <div class="dropzone" data-area="Seguros e Serviços de Saúde"><h4>Seguros e Serviços de Saúde</h4>
+      <h5>Empresas que operam na área de seguros com soluções digitais para gestão de saúde</h5></div>
+
+    <div class="dropzone" data-area="Indústria Farmacêutica e diagonóstivo"><h4>Indústria Farmacêutica e diagonóstico:</h4>
+      <h5>Empresas que desenvolvem medicamentos, dispositivos médicos ou soluções de diagnóstico, integrando dados e tecnologias digitais</h5></div>
+
+    <div class="dropzone" data-area="Comunicações e Serviços Digitais"><h4>Comunicações e Serviços Digitais</h4>
+      <h5>Empresas especializadas em produção de conteúdos digitais para educação médica, formação e ciência</h5></div>
+
+    <div class="dropzone" data-area="Consultoria e Design"><h4>Consultoria e Design</h4>
+      <h5>Empresas focadas na transformação digital através de design de processos, jornadas do paciente e comunicação visual</h5></div>
+  
+    </div>
+
+
+
+  <button onclick="verificar()">Verificar Respostas</button>
+
+  <script>
+    const respostasCorretas = {
+      Microsoft: "Tecnologia e Inovação",
+      CUF: "Saúde e Cuidados de Saúde",
+      Multicare: "Seguros e Serviços de Saúde",
+      Roche: "Indústria Farmacêutica e diagonóstico",
+      Vodafone: "Comunicações e Serviços Digitais",
+      ULS: "Saúde e Cuidados de Saúde",
+      Ipo: "Saúde e Cuidados de Saúde",
+      Linde: "Indústria Farmacêutica e diagonóstico",
+      Decunify: "Tecnologia e Inovação",
+      ByMe: "Tecnologia e Inovação",
+      Kendi: "Comunicações e Serviços Digitais",
+      VisualTinking: "Consultoria e Design"
+
+    };
+
+    const logos = document.querySelectorAll('.logo');
+    const dropzones = document.querySelectorAll('.dropzone');
+
+    logos.forEach(logo => {
+      logo.addEventListener('dragstart', e => {
+        e.dataTransfer.setData('text/plain', logo.id);
+      });
+    });
+
+    dropzones.forEach(zone => {
+      zone.addEventListener('dragover', e => e.preventDefault());
+      zone.addEventListener('drop', e => {
+        const id = e.dataTransfer.getData('text/plain');
+        const dragged = document.getElementById(id);
+        zone.appendChild(dragged);
+      });
+    });
+
+    function verificar() {
+      dropzones.forEach(zone => {
+        const logo = zone.querySelector('.logo');
+        if (logo) {
+          const empresa = logo.id;
+          const area = zone.getAttribute('data-area');
+          if (respostasCorretas[empresa] === area) {
+            zone.classList.add('correct');
+            zone.classList.remove('wrong');
+          } else {
+            zone.classList.add('wrong');
+            zone.classList.remove('correct');
+          }
+        }
+      });
+    }
+  </script>
+
+
+
+
+
+

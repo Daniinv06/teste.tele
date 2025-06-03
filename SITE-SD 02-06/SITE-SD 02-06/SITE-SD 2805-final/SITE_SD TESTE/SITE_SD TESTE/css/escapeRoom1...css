@@ -1,0 +1,201 @@
+/* escaperoom1.css */
+
+.modal-content {
+  background: #fffbe6;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  color: #000;
+  font-family: 'Poppins', 'Inter', Arial, sans-serif;
+  border: 2px solid #FFD932;
+}
+
+
+.modal-title {
+  color: #000;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.modal-body p {
+  color: #222;
+  font-size: 1.1rem;
+}
+
+/* Imagens e vídeos na modal */
+.modal-body img,
+.modal-body iframe {
+  display: block;
+  margin: 1rem auto;
+  border-radius: 10px;
+  max-width: 100%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+/* Botão fechar (rodapé) */
+.modal-footer .btn-secondary {
+  background-color: #000;
+  color: #FFD932;
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem 2.2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: inherit;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: background 0.2s, color 0.2s;
+}
+
+.modal-footer .btn-secondary:hover,
+.modal-footer .btn-secondary:focus {
+  background-color: #FFD932;
+  color: #000;
+  border: 1px solid #000;
+}
+
+/* Botão fechar (canto superior direito) */
+.btn-close {
+  background-color: #FFD932 !important;
+  border-radius: 50%;
+  opacity: 1;
+  border: 1px solid #000;
+  width: 1.5rem;
+  height: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.btn-close:focus, .btn-close:hover {
+  background-color: #000 !important;
+  color: #FFD932 !important;
+  border: 1px solid #FFD932;
+  outline: none;
+  opacity: 1;
+}
+
+/* Modal header e footer */
+.modal-header, .modal-footer {
+  border: none;
+  background: transparent;
+}
+
+/* Responsivo para modais */
+@media (max-width: 575px) {
+  .modal-dialog {
+    margin: 1rem;
+  }
+  .modal-content {
+    padding: 0.5rem;
+  }
+}
+
+
+
+/*gamificação_arrastar */
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #fef9e7;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2rem;
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.progress {
+  height: 20px;
+  background-color: #4caf50;
+  width: 0;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.options, .dropzone {
+  border: 2px dashed #ccc;
+  padding: 15px;
+  border-radius: 10px;
+  min-height: 120px;
+  text-align: center;
+  background-color: #fff;
+  flex: 1 1 45%;
+}
+
+.dropzone {
+  background-color: #fcf8e3;
+}
+
+.draggable {
+  background-color: #f0f0f0;
+  margin: 10px 0;
+  padding: 10px;
+  cursor: grab;
+  border-radius: 5px;
+}
+
+button {
+  display: block;
+  margin: 30px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+
+.draggable.correct {
+  background-color: #4caf50 !important; /* verde */
+  color: #fff;
+}
+.draggable.wrong {
+  background-color: #f44336 !important; /* vermelho */
+  color: #fff;
+}
+.dropzone {
+  min-height: 80px;
+  border: 2px dashed #aaa;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+
+/* bloco missão*/
+
+.bloco-missao-cinza {
+  background: #d9d9d9;
+  border-radius: 10px;
+  padding: 32px 0 24px 0;
+  margin-bottom: 28px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+#missao.bloco-missao-cinza {
+  margin-top: 150px; /* Ajusta este valor conforme a altura da tua navbar */
+}
+
+/*RA*/
+
+.qr-missao {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 10px;
+}

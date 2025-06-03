@@ -1,0 +1,472 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800;1,900&display=swap');
+
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body
+{
+	font-family: 'Poppins', sans-serif;
+}
+
+h1
+{
+	font-size: 2.5rem;
+	font-weight: 700;
+	color: rgb(0, 0, 0);
+}
+
+span
+{
+	font-size: .9rem;
+}
+
+h6
+{
+	font-size: 1.1rem;
+	color: rgb(24, 24, 49);
+}
+
+
+/*------------- Navigation style start ------------*/
+nav
+{
+	position: fixed;
+	width: 100%;
+	background-color: #FFD932;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1vw 8vw;
+	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+	z-index: 1;
+}
+
+nav .logo
+{
+	width: 300px;
+	cursor: pointer;
+}
+
+nav .navigation
+{
+	display: flex;
+}
+
+#menu-btn
+{
+	width: 30px;
+	height: 30px;
+	display: none;
+}
+
+#menu-close
+{
+	display: none;
+}
+
+nav .navigation ul
+{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+nav .navigation ul li
+{
+	list-style: none;
+	margin-left: 30px;
+}
+
+nav .navigation ul li a
+{
+	text-decoration: none;
+	color: rgb(0, 0, 0);
+	font-size: 16px;
+	font-weight: 500;
+	transition: 0.3s ease;
+}
+
+nav .navigation ul li a.active,
+nav .navigation ul li a:hover
+{
+	color: #000000;
+
+}
+/*------------- Navigation style end ------------*/
+
+
+
+/*------------- Hero section styling start --------------*/
+#home {
+  background-size: contain; /* mostra a imagem inteira */
+  background-position: center;
+  background-repeat: no-repeat;
+
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  padding-top: 760px;
+}
+
+
+
+#home h2
+{
+	color: #bd0303;
+	font-size: 2.2rem;
+	letter-spacing: 1px;
+}
+
+#home p
+{
+	width: 50%;
+	color: #000000;
+	font-size: 0.9rem;
+	line-height: 25px;
+}
+
+#home .btn
+{
+	 display: flex;
+  justify-content: center;  /* centra horizontalmente */
+  align-items: center; 
+	margin-top: 10px;
+	margin-left: 20px;
+}
+
+#home a
+{
+	text-decoration: none;
+	font-size: 0.9rem;
+	padding: 13px 35px;
+	background-color: #fff;
+	font-weight: 600;
+	border-radius: 5px;
+}
+
+#home a.blue
+{
+	color: #fff;
+	background: #FFD932;
+	transition: 0.3s ease;
+}
+
+#home a.blue:hover
+{
+	color: rgb(21, 21, 100);
+	background: #fff;
+}
+
+#home a.yellow
+{
+	color: #fff;
+	background: #fdc938;
+	transition: 0.3s ease;
+}
+
+#home a.yellow:hover
+{
+	color: rgb(21, 21, 100);
+	background: #fff;
+}
+/*------------- Hero section styling end --------------*/
+
+
+/*------------- Features section styling start -------------*/
+#features
+{
+	padding: 5vw 8vw 0 8vw;
+	text-align: center;
+}
+
+#features .fea-base
+{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	grid-gap: 1rem;
+	margin-top: 50px;
+}
+
+#features .fea-box
+{
+	background: #edf1f2;
+	text-align: start;
+	padding: 1.2rem;
+	border-radius: 6px;
+}
+
+#features .fea-box i
+{
+	font-size: 2.3rem;
+	color: rgb(0, 0, 255);
+}
+
+#features .fea-box h3
+{
+	font-size: 1.2rem;
+	font-weight: 600;
+	color: rgb(46, 46, 59);
+	padding: 13px 0 7px 0;
+}
+
+#features .fea-box p
+{
+	font-size: 1rem;
+	font-weight: 400;
+	color: rgb(0, 0, 248);
+}
+/*------------- Features section styling end -------------*/
+
+/* Plano de estudos */
+.plano-estudos-container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.background-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(4px);
+  z-index: 1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.conteudo-texto {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 1300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2rem;
+}
+
+.ano {
+  width: 30%;
+  text-align: center;
+}
+
+.ano h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.ano p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: inherit;
+}
+
+.ano-esquerda {
+  text-align: center;
+}
+
+.ano-centro {
+  text-align: center;
+}
+
+.ano-direita {
+  text-align: center;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .conteudo-texto {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ano {
+    width: 100%;
+    text-align: center !important;
+    margin-bottom: 2rem;
+  }
+}
+.titulo-plano {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-bottom: 100px;
+ font-size: 45px;
+}
+
+.titulo-plano h2 {
+  font-size: 2.5rem;
+  color: white;
+  font-weight: bold;
+}
+
+/*--Fim Planos de estudo--*/
+
+
+
+
+
+
+/*------------- Courses section styling start ------------*/
+#course {
+  padding: 8vw 8vw 8vw 8vw;
+  text-align: center; /* Alinha conteúdo à esquerda */
+  max-width: 1000px;
+  margin: 0 auto; /* Centraliza a secção em ecrãs grandes mantendo alinhamento à esquerda */
+}
+#course .course-box
+{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	grid-gap: 1rem;
+	margin-top: 50px;
+}
+
+#course .courses
+{
+	text-align: start;
+	background: #edf1f2;
+	height: 100%;
+	position: relative;
+}
+
+#course .courses img
+{
+	width: 100%;
+	height: 60%;
+	background-size: cover;
+	background-position: center;
+}
+
+#course .courses .details
+{
+	padding: 15px 15px 0 15px;
+}
+
+#course .courses .details i
+{
+	color: #fdc93b;
+	font-size: .9rem;
+}
+
+#course .courses .cost
+{
+	background-color: rgb(74, 74, 136);
+	color: #fff;
+	line-height: 70px;
+	width: 70px;
+	height: 70px;
+	text-align: center;
+	border-radius: 50%;
+	position: absolute;
+	right: 15px;
+	bottom: 100px;
+}
+/*------------- Courses section styling end ------------*/
+
+
+
+
+
+/*------------- Experts section styling starts ----------*/
+#experts {
+  padding: 4vw 2vw;
+  text-align: center;
+}
+
+#experts .expert-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 50px;
+}
+
+
+#experts .expert-box .profile {
+  background: #fafaf1;
+  padding: 30px 10px;
+  box-shadow: #e9d30e;
+  text-align: center;         /* Centraliza o texto */
+  display: flex;
+  flex-direction: column;
+  align-items: center;        /* Centraliza imagem e conteúdo */
+}
+
+#experts .expert-box .profile:hover {
+  box-shadow: rgba(236, 213, 6, 0.1) 0px 10px 50px;
+}
+
+#experts .expert-box .profile img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5%;
+  margin-bottom: 10px;
+}
+
+.pro-links {
+  margin-top: 10px;
+}
+
+.pro-links i {
+  padding: 10px 13px;
+  border: 1px solid #000000;
+  cursor: pointer;
+  transition: 0.3s ease;
+  color: #000000;
+}
+
+.pro-links i:hover {
+  background: #e9d30e;
+  color: #fff;
+}
+
+.ver-mais {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.btn-vermais {
+  display: inline-block;
+  padding: 8px 20px;
+ background-color: #fafaf1;
+  color: #000000;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+  margin-top: 10px;
+   border: 1px solid #000000;
+}
+
+.btn-vermais:hover {
+  background-color: #e9d30e;
+}
+
+/*------------- Experts section styling ends ----------*/
+
